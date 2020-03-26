@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Block Builder</title>
+
+    <link rel="stylesheet" href="./lib/chive.css" />
+    <link rel="stylesheet" href="./src/css/styles.css" />
+</head>
+<body>
+    <header class="fixed z-index pinned top left width-full shadow">
+        <h1>Block builder</h1>
+    </header>
+    <main class="reset-margin">
+        <section class="full height-full reset-padding">
+            <svg class="block width-full height-full" id="display"></svg>
+        </section>
+        <section class="card fixed pinned top right z-index padding" id="controls">
+            <form name="values" (submit)="handleForm">
+                <!-- <label>
+                    <span>Opacity</span>
+                    <input type="number" name="opacity" />
+                </label> -->
+                <fieldset>
+                    <legend>Opacity</legend>
+                    <label>
+                        <input type="radio" name="opacity" value="0.3" />
+                        <span>0.3</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="opacity" value="1" />
+                        <span>1</span>
+                    </label>
+                </fieldset>
+                <label>
+                    <span>Delete mode</span>
+                    <input type="checkbox" name="delete" [checked]="deleteMode" (change)="setDelete" />
+                </label>
+                <label>
+                    <span>Colour</span>
+                    <input type="color" name="colour" />
+                </label>
+                <button>Go!</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="./lib/dill.js"></script>
+    <script src="./dist/app.js"></script>
+</body>
+</html>

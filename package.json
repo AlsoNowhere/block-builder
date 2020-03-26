@@ -1,0 +1,17 @@
+{
+	"name": "block-builder",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"build:js": "rollup --config",
+		"watch:js": "rollup --config --watch"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {},
+	"dependencies": {
+		"rollup": "^2.0.6"
+	}
+}
